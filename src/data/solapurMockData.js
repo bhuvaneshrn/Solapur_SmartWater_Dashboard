@@ -1,0 +1,182 @@
+export const SMC_ZONES = [
+    {
+        id: 1,
+        name: "Zone A: North Solapur (Bhavani Peth)",
+        officialId: "SMC-W-001",
+        coordinates: [17.6850, 75.9180],
+        pressure: 2.15,
+        elevation: 485,
+        tailEndRisk: "LOW",
+        operationalEfficiency: 92,
+        assetHealth: 88,
+        leakProbability: 8,
+        infrastructureStatus: "NOMINAL",
+        populationServed: 145000,
+        wardOfficer: "Arun K. Deshpande",
+        recommendation: "Maintain supply pressure. Routine structural audit scheduled for Q3.",
+    },
+    {
+        id: 2,
+        name: "Zone B: South Solapur (Kumbhari Area)",
+        officialId: "SMC-W-002",
+        coordinates: [17.6400, 75.9350],
+        pressure: 1.65,
+        elevation: 512,
+        tailEndRisk: "HIGH",
+        operationalEfficiency: 74,
+        assetHealth: 62,
+        leakProbability: 38,
+        infrastructureStatus: "DEGRADED",
+        populationServed: 112000,
+        wardOfficer: "Sunit S. Patil",
+        recommendation: "Pressure drop detected. Potential illegal tapping in elevated tail-end area. Enforcement team dispatch recommended.",
+    },
+    {
+        id: 3,
+        name: "Zone C: Central Solapur (Railway Colony)",
+        officialId: "SMC-W-003",
+        coordinates: [17.6750, 75.9080],
+        pressure: 4.20,
+        elevation: 472,
+        tailEndRisk: "LOW",
+        operationalEfficiency: 45,
+        assetHealth: 35,
+        leakProbability: 82,
+        infrastructureStatus: "CRITICAL",
+        populationServed: 88000,
+        wardOfficer: "Rajesh M. Gaikwad",
+        recommendation: "URGENT: High pressure on vintage cast-iron mains. Immediate valve throttling required to prevent burst.",
+    },
+    {
+        id: 4,
+        name: "Zone D: West Solapur (Jule Solapur)",
+        officialId: "SMC-W-004",
+        coordinates: [17.6580, 75.8850],
+        pressure: 2.45,
+        elevation: 498,
+        tailEndRisk: "MEDIUM",
+        operationalEfficiency: 96,
+        assetHealth: 94,
+        leakProbability: 4,
+        infrastructureStatus: "OPTIMAL",
+        populationServed: 210000,
+        wardOfficer: "Meena R. Joshi",
+        recommendation: "Infrastructure performing at peak capacity. Energy-saving pump schedules successfully implemented.",
+    },
+    {
+        id: 5,
+        name: "Zone E: Industrial Estate (Chincholi MIDC)",
+        officialId: "SMC-W-005",
+        coordinates: [17.7150, 75.8450],
+        pressure: 3.10,
+        elevation: 490,
+        tailEndRisk: "LOW",
+        operationalEfficiency: 82,
+        assetHealth: 76,
+        leakProbability: 15,
+        infrastructureStatus: "NOMINAL",
+        populationServed: 450000,
+        wardOfficer: "Vikas T. Shinde",
+        recommendation: "Industrial demand spike noted. Balancing reservoir discharge rates to maintain peripheral pressure.",
+    },
+];
+
+export const MUNICIPAL_METRICS = {
+    totalSupply: "420 MLD",
+    billedConsumption: "284 MLD",
+    nrwLoss: 32.4,
+    equityScore: 84,
+    infrastructureIndex: 78.5,
+    activeIncidents: 14,
+    scheduledMaintenance: 3,
+    systemUptime: "99.8%",
+    lastAudit: "2024-02-15 08:30 AM",
+};
+
+export const WATER_BALANCE_DATA = {
+    source: 420,
+    treatment: 412,
+    transmissionLoss: 18,
+    distributionLoss: 92,
+    householdConsumption: 284,
+    unaccounted: 18
+};
+
+export const EQUITY_ANALYSIS_DATA = [
+    { zone: "Zone A", pressure: 2.15, tailEnd: 1.85, variance: 12 },
+    { zone: "Zone B", pressure: 1.65, tailEnd: 1.10, variance: 33 },
+    { zone: "Zone C", pressure: 4.20, tailEnd: 3.90, variance: 7 },
+    { zone: "Zone D", pressure: 2.45, tailEnd: 2.10, variance: 14 },
+    { zone: "Zone E", pressure: 3.10, tailEnd: 2.75, variance: 11 },
+];
+
+export const DEMAND_FORECAST_DATA = [
+    { date: "Feb 20", predicted: 310, actual: 305 },
+    { date: "Feb 21", predicted: 315, actual: null },
+    { date: "Feb 22", predicted: 340, actual: null },
+    { date: "Feb 23", predicted: 420, actual: null },
+    { date: "Feb 24", predicted: 380, actual: null },
+    { date: "Feb 25", predicted: 330, actual: null },
+    { date: "Feb 26", predicted: 320, actual: null },
+];
+
+export const INCIDENT_LOGS = [
+    {
+        id: "INC-9421",
+        severity: "CRITICAL",
+        category: "BURST RISK",
+        location: "Railway Colony Main Line",
+        timestamp: "10 mins ago",
+        status: "OPEN",
+        assignedOfficer: "R. M. Gaikwad",
+        description: "Abnormal pressure surge (>4.5 bar) detected at node SM-32.",
+    },
+    {
+        id: "INC-9418",
+        severity: "MODERATE",
+        category: "LEAKAGE",
+        location: "Bhavani Peth Crossroad",
+        timestamp: "2 hours ago",
+        status: "UNDER REVIEW",
+        assignedOfficer: "A. K. Deshpande",
+        description: "Nocturnal flow analysis suggests 0.4 bar drop in static pressure.",
+    },
+    {
+        id: "INC-9412",
+        severity: "LOW",
+        category: "MAINTENANCE",
+        location: "MIDC Pumping Station 02",
+        timestamp: "5 hours ago",
+        status: "RESOLVED",
+        assignedOfficer: "V. T. Shinde",
+        description: "Scheduled filter replacement and seal inspection completed.",
+    },
+];
+
+export const DEMAND_SUPPLY_DATA = [
+    { time: "00:00", supply: 120, demand: 85 },
+    { time: "04:00", supply: 140, demand: 110 },
+    { time: "08:00", supply: 420, demand: 410 },
+    { time: "12:00", supply: 280, demand: 290 },
+    { time: "16:00", supply: 220, demand: 210 },
+    { time: "20:00", supply: 380, demand: 395 },
+];
+
+export const PRESSURE_STABILITY_TREND = [
+    { date: "Feb 13", avg: 2.4, stability: 94 },
+    { date: "Feb 14", avg: 2.5, stability: 92 },
+    { date: "Feb 15", avg: 2.3, stability: 88 },
+    { date: "Feb 16", avg: 2.6, stability: 85 },
+    { date: "Feb 17", avg: 2.1, stability: 90 },
+    { date: "Feb 18", avg: 2.4, stability: 93 },
+    { date: "Feb 19", avg: 2.5, stability: 94 },
+];
+
+export const NRW_REDUCTION_STATS = [
+    { month: "Sept", current: 42, target: 35 },
+    { month: "Oct", current: 40, target: 35 },
+    { month: "Nov", current: 38, target: 30 },
+    { month: "Dec", current: 36, target: 30 },
+    { month: "Jan", current: 34, target: 25 },
+    { month: "Feb", current: 32, target: 25 },
+];

@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --gov-navy: #002147;
+    --gov-blue: #003366;
+    --gov-white: #FFFFFF;
+    --gov-grey: #F8F9FA;
+  }
+
+  body {
+    @apply bg-gov-grey text-gov-slate antialiased transition-colors duration-300;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .dark body {
+    @apply bg-gov-navy text-slate-100;
+  }
+}
+
+@layer components {
+  .gov-header-strip {
+    background: linear-gradient(to right, #FF9933 0%, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%, #138808 100%);
+    @apply h-1.5 w-full;
+  }
+
+  .gov-card {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-gov rounded-lg transition-all duration-300;
+  }
+
+  .gov-button-primary {
+    @apply bg-gov-navy hover:bg-gov-blue text-white px-6 py-2 rounded font-bold transition-all active:scale-95;
+  }
+
+  .gov-input {
+    @apply bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 px-4 py-2 rounded focus:ring-2 focus:ring-gov-blue outline-none transition-all;
+  }
+}
+
+@layer utilities {
+  .text-glow-navy {
+    text-shadow: 0 0 10px rgba(0, 33, 71, 0.2);
+  }
+
+  .grid-bg-light {
+    background-size: 30px 30px;
+    background-image:
+      linear-gradient(to right, rgba(0, 33, 71, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 33, 71, 0.05) 1px, transparent 1px);
+  }
+
+  .grid-bg-dark {
+    background-size: 30px 30px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gov-grey dark:bg-gov-navy;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-400 dark:bg-slate-700 rounded-full hover:bg-slate-500 dark:hover:bg-slate-600;
+}
